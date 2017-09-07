@@ -9,3 +9,6 @@ GAME RULES:
 
 */
 
+
+ikonki do poprawy!
+
