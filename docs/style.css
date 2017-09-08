@@ -133,11 +133,15 @@ i {
     font-size: 32px;
     line-height: 1;
     vertical-align: text-top;
-    margin-top: -4px;
+    margin-top: -3px;
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+i.fa-1x {
+    font-size: 1.5em;
+}
+
+.btn-new { top: 55px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
