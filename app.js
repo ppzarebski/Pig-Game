@@ -73,6 +73,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 function nextPlayer() {
 	activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 	roundScore = 0;
+	document.querySelector('.alert').style.display = 'none';
 	var elems = document.querySelectorAll('.btn-stop');
 	for (var i = 0; i < elems.length; i++) {
     	elems[i].disabled = false;
@@ -111,12 +112,12 @@ function init() {
 };
 
 function wait() {
+	document.querySelector('.alert').style.display = 'block';
 	var elems = document.querySelectorAll('.btn-stop');
 	for (var i = 0; i < elems.length; i++) {
     	elems[i].disabled = true;
 	}
 	setTimeout(nextPlayer, 1000);
 }
-
 
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
