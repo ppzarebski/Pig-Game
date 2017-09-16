@@ -28,6 +28,7 @@ body {
 
 .wrapper {
     width: 1000px;
+    max-width:100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,7 +134,7 @@ i {
     font-size: 32px;
     line-height: 1;
     vertical-align: text-top;
-    margin-top: -3px;
+    margin-top: -2px;
     transition: margin 0.3s;
 }
 
@@ -141,18 +142,56 @@ i.fa-1x {
     font-size: 1.5em;
 }
 
-.btn-new { top: 55px;}
+.input {top: 50px;
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #555;
+        background: none;
+        border: 2px solid #f5a3a3;
+        border-left: none;
+        border-right: none;
+        font-family: Lato;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        transition: background-color 0.3s, color 0.3s}
+.play { top: 15px;
+        font-weight: bold;
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #555;
+        background: none;
+        font-family: Lato;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;}
+.btn-new { top: 90px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
-.dice {
+.dice, .dice1 {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+.dice {
+    top: 138px;
+}
+.dice1 {
+    top: 248px;
+}
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.btn-stop:disabled {
+    color: #EB4D4D;
+    text-decoration: line-through;
+}
