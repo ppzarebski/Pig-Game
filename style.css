@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(images/back.jpg);
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -24,6 +24,7 @@ body {
     position: relative;
     height: 100vh;
     color: #555;
+    min-width: 865px;
 }
 
 .wrapper {
@@ -73,6 +74,7 @@ body {
 
 .active { background-color: #f7f7f7; }
 .active .player-name { font-weight: 300; }
+.active .two-ones { font-weight: 600; }
 
 .active .player-name::after {
     content: "\2022";
@@ -121,13 +123,13 @@ button {
 }
 
 button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
+button:hover i.btn { margin-right: 20px; }
 
 button:focus {
     outline: none;
 }
 
-i {
+i.btn {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;
@@ -181,6 +183,9 @@ i.fa-1x {
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+#dice {
+    top: 178px;
+}
 .dice {
     top: 138px;
 }
@@ -195,10 +200,14 @@ i.fa-1x {
     color: #EB4D4D;
     text-decoration: line-through;
 }
-
+button#btn-new:disabled {
+    color: #555;
+    text-decoration: none;
+}
 .alert {
     background: white;
-    border: 3px solid gray;
+    border: 5px solid #EB4D4D;
+    border-radius: 18px / 30px;
     font-size: 50px;
     font-family: Lato;
     font-weight: 600;
@@ -207,4 +216,75 @@ i.fa-1x {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
+    padding: 20px;
+
+}
+
+.version {
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: lowercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    top: 530px;
+}
+
+.v1 {
+    transform: translateX(-150%);
+}
+.v2 {
+    transform: translateX(+50%);
+}
+
+a {
+    font-family: Lato;
+    color: #555;
+    text-decoration: none;
+}
+
+.btn-rules {
+    top: 530px;
+}
+.close {
+    top: 6px;
+    left: 97%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #EB4D4D;
+}
+button:hover i.fa-times {
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+i.fa-times {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.rules {
+    background: white;
+    border: 3px solid #EB4D4D;
+    border-radius: 18px / 30px;
+    font-size: 20px;
+    font-family: Lato;
+    font-weight: 300;
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    padding: 20px;
+}
+#ord {
+    vertical-align: top;
 }
