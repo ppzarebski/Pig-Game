@@ -20,7 +20,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 			if (dice === 6 && dice === previous) {
 				roundScore = 0;
 				document.querySelector('#current-' + activePlayer).textContent = roundScore;
-				document.querySelector('.dice').src = 'dice-6-r.png';
+				document.querySelector('.dice').src = 'images/dice-6-r.png';
 				wait();
 			} else {
 				roundScore += dice;
